@@ -32,11 +32,6 @@ public class Constants {
                 RevHubOrientationOnRobot.LogoFacingDirection.UP,
                 RevHubOrientationOnRobot.UsbFacingDirection.RIGHT
         )));
-        // No longer used
-//        c.imuOrientation.set(new RevHubOrientationOnRobot(
-//                RevHubOrientationOnRobot.LogoFacingDirection.UP,
-//                RevHubOrientationOnRobot.UsbFacingDirection.RIGHT
-//        ));
         c.leftPodY.set(7.768021704133143);
         c.rightPodY.set(-7.853980087195495);
         c.strafePodX.set(7.659750855874598);
