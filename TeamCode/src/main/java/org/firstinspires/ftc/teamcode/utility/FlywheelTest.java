@@ -1,15 +1,15 @@
-package org.firstinspires.ftc.teamcode.teleop;
+package org.firstinspires.ftc.teamcode.utility;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.eventloop.opmode.Utility;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 import org.firstinspires.ftc.teamcode.devices.bases.BasicMotor;
 
 
-@TeleOp(name="Intake Test", group="Prototyping")
-public class IntakeTest extends LinearOpMode {
+@Utility(name="Flywheel Test", description = "Directly control flywheel power with the left stick.")
+public class FlywheelTest extends LinearOpMode {
     @Override
     public void runOpMode() {
         ElapsedTime runtime = new ElapsedTime();
@@ -17,7 +17,7 @@ public class IntakeTest extends LinearOpMode {
         telemetry.addData("Status", "Initialized");
         telemetry.update();
 
-        BasicMotor intake = new BasicMotor(hardwareMap.get(DcMotorEx.class, "intake"));
+        BasicMotor flywheel = new BasicMotor(hardwareMap.get(DcMotorEx.class, "flywheel"));
 
         // Wait for the game to start (driver presses START)
         waitForStart();
@@ -27,7 +27,7 @@ public class IntakeTest extends LinearOpMode {
         while (opModeIsActive()) {
             double speed = gamepad1.left_stick_y;
 
-            intake.run(speed);
+            flywheel.run(speed);
 
             // Show the elapsed game time and wheel power.
             telemetry.addData("Elapsed", runtime);
