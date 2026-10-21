@@ -32,7 +32,7 @@ public class IntakeTest extends LinearOpMode {
 
             // POV Mode uses left stick to go forward, and right stick to turn.
             // - This uses basic math to combine motions and is easier to drive straight.
-            double speed = gamepad1.left_stick_y;
+            double speed = gamepad1.left_stick_y;// * 1000;
 
             // Tank Mode uses one stick to control each wheel.
             // - This requires no math, but it is hard to drive forward slowly and keep straight.

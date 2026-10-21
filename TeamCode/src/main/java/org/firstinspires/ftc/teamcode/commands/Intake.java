@@ -11,7 +11,7 @@ public class Intake {
 
     public Intake(DcMotorEx intakeMotor) {
         this.intakeMotor = intakeMotor;
-        this.intakeMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        //this.intakeMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         this.intakeMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.FLOAT);
         //this.intakeMotor.setVelocityPIDFCoefficients();
 
@@ -23,7 +23,8 @@ public class Intake {
     }
 
     public void run(double speed) {
-        intakeMotor.setVelocity(speed);
+        //intakeMotor.setVelocity(speed);
+        intakeMotor.setPower(speed);
     }
 
     public void stop() {
